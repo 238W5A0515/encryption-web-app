@@ -45,7 +45,7 @@ encryption-web-app/
 2. Open index.html in your browser.
 # 📸 Screenshot
 ![image](https://github.com/user-attachments/assets/9b6f49f9-bb8e-428e-899d-4d1e1e5fc913)
-
+you can visit live project in https://238w5a0515.github.io/encryption-web-app/
 # 📜 License
 This project is licensed under the MIT License
 
