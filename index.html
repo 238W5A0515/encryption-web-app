@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encryption Web App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Encryption Web Application</h1>
+
+    <label for="algorithm">Select Algorithm:</label>
+    <select id="algorithm" onchange="updateOptions()">
+      <option value="AES">AES</option>
+      <option value="DES">DES</option>
+    </select>
+
+    <label for="mode">Select Mode:</label>
+    <select id="mode" onchange="updateIVField()"></select>
+
+    <label for="key">Enter Key (For AES use 16, 24, or 32 bytes):</label>
+    <input type="text" id="key" placeholder="Enter Key" />
+
+    <div class="iv-container" id="ivContainer">
+      <label for="iv">Enter IV:</label>
+      <input type="text" id="iv" placeholder="Enter IV" />
+    </div>
+
+    <label for="plaintext">Enter Text:</label>
+    <textarea id="plaintext" placeholder="Enter text to encrypt"></textarea>
+
+    <button onclick="encryptText()">Encrypt</button>
+    <button onclick="decryptText()">Decrypt</button>
+
+    <label for="encryptedText">Encrypted Text:</label>
+    <textarea id="encryptedText" readonly></textarea>
+
+    <label for="decryptedText">Decrypted Text:</label>
+    <textarea id="decryptedText" readonly></textarea>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
